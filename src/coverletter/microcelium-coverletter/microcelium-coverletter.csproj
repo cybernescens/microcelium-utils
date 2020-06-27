@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PackAsTool>True</PackAsTool>
+    <ToolCommandName>microcelium-coverletter</ToolCommandName>
+    <NoPackageAnalysis>true</NoPackageAnalysis>
+    <AssemblyName>microcelium-coverletter</AssemblyName>
+    <PackageId>microcelium-coverletter</PackageId>
+    <RootNamespace>Microcelium.CoverLetter</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="fonet" Version="1.0" />
+    <PackageReference Include="iText7" Version="7.1.11" />
+    <PackageReference Include="PowerArgs" Version="3.6.0" />
+    <PackageReference Include="Serilog.Enrichers.Demystify " Version="1.0.0-dev-00019" />
+    <PackageReference Include="Serilog.Enrichers.Environment" Version="2.1.3" />
+    <PackageReference Include="Serilog.Enrichers.Thread" Version="3.1.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Template/**" />
+    <Content Remove="Template/**" />
+    <EmbeddedResource Include="Template/**" />
+  </ItemGroup>
+
+
+</Project>
